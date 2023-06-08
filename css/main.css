@@ -148,6 +148,7 @@ header .header-buscar{
 
 .area-productos .card{
     width: 23%;
+    min-width: 300px;
     background-color: #fff;
     height: 440px;
     border-radius: 6px; 
@@ -156,6 +157,41 @@ header .header-buscar{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: height .5s ease-out;
+}
+
+.card:hover{
+    -webkit-box-shadow: 0px 2px 8px 1px rgba(0,0,0,0.56);
+    -moz-box-shadow: 0px 2px 8px 1px rgba(0,0,0,0.56);
+    box-shadow: 0px 2px 8px 1px rgba(0,0,0,0.56);
+    height: 460px;
+    cursor: pointer;
+}
+
+
+.card .producto-nombre{
+    display: none;
+    transition: height 1s ease-out;
+}
+
+.card:hover > .producto-nombre{
+    display: block;
+    margin-top: -30px;
+    margin-left: 22px;
+}
+
+.card:hover .info-envio{
+    background: #00a650;
+}
+
+.card:hover .info-envio i{
+    color: #fff;
+}
+
+
+.card-img{
+    display: flex;
+    align-items: center;
 }
 
 .card-img img{
@@ -253,6 +289,145 @@ footer .sec-copy{
 }
 
 
+/* media queries */
 
 
-  
+
+@media (min-width: 1354px) and (max-width: 1631px) {
+
+    .wrap-productos {
+        width: 90%;
+    }
+
+    .area-productos .card{
+        width: 23%;
+        min-width: 280px;
+    }
+
+    footer .sec-info {
+        width: 96%;
+    }  
+}
+
+@media (max-width: 1353px) {
+
+    .wrap-productos {
+        width: 96%;
+    }
+
+    .area-productos .card{
+        width: 23%;
+        min-width: 270px;
+    }
+
+    footer .sec-info {
+        width: 96%;
+    }    
+}
+
+@media (max-width: 1222px) {
+    .wrap-productos {
+        width: 96%;
+    }
+
+    .area-productos .card{
+        min-width: 260px;
+    }
+    footer .sec-info {
+        width: 96%;
+    }    
+   
+}
+
+@media (max-width: 1178px) {
+
+    .wrap-productos {
+        width: 90%;
+    }
+
+    .area-productos .card{
+        width: 31%;
+        min-width: 260px;
+    }
+}
+
+@media (min-width: 1033px) {
+    .menu-hamburger{
+        display: none;
+    }
+}
+
+
+@media (max-width: 1032px) {
+    .sec-navbar{
+        display: none;
+    }
+
+    .sec-header{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header-sesion{
+        justify-content: center;
+    }
+
+    .menu-hamburger{
+        width: 50px;
+        height: 35px;
+        border-radius: 4px;
+        background: #04256b;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }   
+    .menu-hamburger i{
+        color: #fff;
+        font-size: 26px;
+        text-align: center;
+        display: block;
+        margin-top: 5px;
+    } 
+}
+
+@media (max-width: 921px) {
+    .wrap-productos {
+        width: 90%;
+    }
+
+    .area-productos .card{
+        width: 48%;
+        min-width: 256px;
+    }
+
+    .card-info{
+        margin-top: -20px;
+    }
+    .sec-copy {
+        text-align: center;
+    }
+    .wrap-productos {
+        width: 90%;
+    }
+}
+
+@media (max-width: 592px) {
+    .wrap-productos {
+        width: 80%;
+    }
+
+    .wrap-productos h2 {
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .area-productos .card{
+        width: 100%;
+        min-width: 256px;
+    }
+
+}
+
+
+
+
+
